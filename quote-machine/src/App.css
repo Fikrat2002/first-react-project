@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 33%, 25%);
+  overflow: hidden;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.667);
+  width: 90%;
+  max-width: 90vw;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.quote-content {
+  padding: 0 10px;
+}
+
+.author {
+  color: hsl(221, 49%, 49%);
+  text-align: end;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+button {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(221, 45%, 60%);
+  color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.button-position {
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: hwb(214 24% 53%);
+}
+
+.fa-quote-left {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(46, 106, 136);
+  margin-bottom: 5px;
+}
+
+.twitter-share {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.twitter-share-button {
+  background: #1DA1F2;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.twitter-share-button:hover {
+  background-color: #1991DB;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .quote-content {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .quote-content {
+    padding: 0 6px;
+  }
+
+  .twitter-share-button {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  .quote-content {
+    padding: 0 4px;
+  }
+
+  .twitter-share-button {
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 6px;
+  }
+
+  h1 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  .quote-content {
+    padding: 0;
+  }
+
+  .twitter-share-button {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    font-size: 10px;
+  }
+}
+
