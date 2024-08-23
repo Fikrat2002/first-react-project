@@ -17,8 +17,9 @@ function Quote() {
             if (results.quotes && results.quotes.length > 0) {
                 const randomIndex = Math.floor(Math.random() * results.quotes.length);
                 setQuote(results.quotes[randomIndex]);
+                setError(null); // Reset error on successful fetch
             } else {
-                setError('No quotes found in the response.');
+                throw new Error('No quotes found in the response.');
             }
         } catch (error) {
             setError(error.message);
@@ -32,6 +33,15 @@ function Quote() {
     const shareOnTwitter = () => {
         const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote.text}" — ${quote.author}`)}`;
         window.open(twitterUrl, '_blank');
+    };
+
+    const changeColorsAndQuote = async () => {
+        try {
+            await fetchQuote(); // Ensure a new quote is fetched
+            changeColors();
+        } catch (error) {
+            setError('Failed to fetch a new quote.');
+        }
     };
 
     const changeColors = () => {
@@ -67,10 +77,7 @@ function Quote() {
                 )}
                 <div className="button-position">
                     <button 
-                        onClick={() => {
-                            fetchQuote();
-                            changeColors();
-                        }} 
+                        onClick={changeColorsAndQuote} 
                         style={{ backgroundColor: btnColor, color: textColor }}
                     >
                         New Quote
@@ -91,12 +98,3 @@ function Quote() {
 }
 
 export default Quote;
-
-
-
-
-
-
-
-
-
