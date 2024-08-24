@@ -33,7 +33,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   transition: color 0.3s;
 }
 
@@ -68,7 +68,7 @@ button {
   border: none;
   border-radius: 5px;
   background-color: #3498db;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -89,7 +89,7 @@ button:hover {
 }
 
 .twitter-share-button {
-  background: #1DA1F2;
+  background: rgb(29, 161, 242);
   border: none;
   border-radius: 50%;
   padding: 8px;
@@ -107,7 +107,7 @@ button:hover {
 }
 
 .twitter-share-button:hover {
-  background-color: #1991DB;
+  background-color: rgb(25, 145, 219);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
